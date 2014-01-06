@@ -3,12 +3,37 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="styles/demo.css">
+  <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="branding" id="brandingEl">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <section>
-    <h1>Examples</h1>
+    <h1 class="logo"><em>Re</em>form</h1>
+    <ul class="hero-list">
+      <li>
+        <span class="icon-bullhorn icon"></span>
+        This project is totally just starting out. Give it a break will you?
+      </li>
+      <li>
+        <span class="icon-rocket icon"></span>
+        Superchange your forms piece by piece with these simple plugins
+      </li>
+      <li>
+        <span class="icon-box-add icon"></span>
+        Weighing in at xxkb minified and a mere xkb gzipped. Download em here
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Examples</h2>
     <div class="example example-postcode">
-      <h2>Postal Code</h2>
+      <h3>Postal Code</h3>
       <div class="control">
         <input type="text" data-replicate-source="postcode" placeholder="3" maxlength="1" />
         <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
@@ -20,7 +45,7 @@
 
 
     <div class="example example-pin">
-      <h2>Pin Code</h2>
+      <h3>Pin Code</h3>
       <div class="control">
         <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
         <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
@@ -32,7 +57,7 @@
     </div>
 
     <div class="example example-mobile">
-      <h2>Mobile Phone Number</h2>
+      <h3>Mobile Phone Number</h3>
       <div class="control">
         <input type="text" data-replicate-source="mobile" placeholder="0400" maxlength="4" />
         <input type="text" data-replicate-source="mobile" placeholder="123" maxlength="3" />
@@ -42,7 +67,7 @@
     </div>
 
     <div class="example example-mobile">
-      <h2>Landline Phone Number</h2>
+      <h3>Landline Phone Number</h3>
       <div class="control">
         <input type="text" data-replicate-source="Landline" placeholder="+61" maxlength="3" />
         <input type="text" data-replicate-source="Landline" placeholder="03" maxlength="2" />
@@ -56,6 +81,17 @@
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  <script src="../scripts/concat-input-fields.js"></script>
+  <script src="scripts/concat-input-fields.js"></script>
+
+  <script>
+    var brandingEl = document.getElementById('brandingEl')
+    document.onscroll = function() {
+      if (!document.body.scrollTop) {
+          brandingEl.classList.remove("branding-minified")
+      } else {
+        brandingEl.classList.add("branding-minified")
+      }
+    }
+  </script>
 </body>
 </html>

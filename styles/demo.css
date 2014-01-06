@@ -1,21 +1,25 @@
 body {
-  background: #673bb8;
-  padding:0;
+  background: #e5e8ec;
   margin:0;
+  padding:0;
+  color: #323a45;
+  font-family: 'Cutive', serif;
 }
 
 /*Typography*/
 h1 {
-  color: #fff;
-  font-family: Cambria, Helvetica Neue, Sans Serif;
+  color: #323a45;
   text-align: left;
   font-size: 50px;
 }
 h2 {
-  color: #e8e8e8;
-  font-family: Cambria, Helvetica, Sans Serif;
-  text-align: center;
+  text-align: left;
   font-size: 30px;
+
+}
+h3 {
+  text-align: left;
+  font-size: 20px;
 }
 
 section {
@@ -24,38 +28,105 @@ section {
   width: 80%;
 }
 
+/*Branding*/
+.branding {
+  display: table;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+}
+.branding.branding-minified span { height: 8px; }
+
+  .branding span {
+    display: table-cell;
+    height: 20px;
+    transition: height .5s;
+  }
+  .branding span:nth-child(1) { background-color: #323a45; width: 44%; }
+  .branding span:nth-child(2) { background-color: #1fbba6; width: 27%; }
+  .branding span:nth-child(3) { background-color: #f27935; width: 15%; }
+  .branding span:nth-child(4) { background-color: #00afd1; width: 6%; }
+
+/*Logo*/
+.logo em {
+  color: #f27935;
+  font-style: normal;
+}
+
+/*Billboard Section*/
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 90px 0;
+}
+
+.hero-list li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 26%;
+  padding: 0 2.5%;
+  overflow: hidden;
+}
+  .hero-list li .icon {
+    display: block;
+    font-size: 90px;
+    margin-bottom: 25px;
+  }
+
 .control {
 }
 
-.control input {
-  padding: 15px;
-  background: rgba(255,255,255,.8);
-  box-shadow: 0 3px 4px rgba(0,0,0,.1);
+input {
+  background: rgba(255,255,255,.5);
+  box-shadow: 0 3px 4px rgba(0,0,0,.02);
   border: solid 2px rgba(255,255,255,.8);
-  height: 50px;
-  display: inline-block;
-  font-size: 30px;
-  transition: background .5s, box-shadow .5s, border-color .5s;
-  text-align: center;
+  color: #333;
   cursor: pointer;
+  display: inline-block;
+  padding: 6px;
+}
+
+.control input {
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Cutive', serif;
+  padding: 15px;
+  text-align: center;
+  transition: background .5s, box-shadow .5s, border-color .5s;
+}
+
+.control input:hover {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.12);
+  transition: background .1s, box-shadow .3s, border-color .1s;
 }
 
 .control input:focus {
   background-color: rgba(255,255,255,1);
-  border-color: #00b38a;
-  box-shadow: 0 3px 4px rgba(0,0,0,.2);
+  border-color: #1fbba6;
   outline: none;
   transition: background .1s, box-shadow .3s, border-color .1s;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(0,0,0,0.3);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgba(0,0,0,0.3);
+}
+
 .example {
-  border-bottom: dashed 2px #e8e8e8;
-  padding-bottom: 30px;
+  border-bottom: solid 1px rgba(255,255,255,0.25);
+  padding: 25px 0 75px;
 }
 
 .input-hidden {
   opacity: 0;
   transition: opacity 1s;
+  margin-top: 25px;
 }
 
 .example:hover .input-hidden {
@@ -66,6 +137,43 @@ section {
 /* Size input fields */
 input[maxlength="1"] { width: 40px; }
 input[maxlength="2"] { width: 50px; }
-input[maxlength="3"] { width: 60px; }
-input[maxlength="4"] { width: 70px; }
-input[maxlength="5"] { width: 80px; }
+input[maxlength="3"] { width: 65px; }
+input[maxlength="4"] { width: 85px; }
+input[maxlength="5"] { width: 90px; }
+
+/*Icon Fonts*/
+@font-face {
+  font-family: 'icon';
+  src:url('../fonts/icon.eot');
+  src:url('../fonts/icon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icon.woff') format('woff'),
+    url('../fonts/icon.ttf') format('truetype'),
+    url('../fonts/icon.svg#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-box-add:before {
+  content: "\e600";
+}
+.icon-rocket:before {
+  content: "\e601";
+}
+.icon-bullhorn:before {
+  content: "\e602";
+}
+
