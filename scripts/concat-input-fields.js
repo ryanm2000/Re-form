@@ -35,7 +35,7 @@
       // Wire up keypress and keyup events
       sourceFields.keypress(function(e) {
         var that = $(this);
-        if (e.which !== 0) { fieldAdvance(that); } // Advance to the next field
+        if (that.val().length+1 == that.attr('maxlength') && e.which !== 0) { fieldAdvance(that); } // Advance to the next field
       }).keyup(function() {
         copyToDestination(
           generateValue(sourceFields),
@@ -47,8 +47,10 @@
 
   // If we are have replicate-destination present
   if($('[data-replicate-destination]')) {
-    var replicateGroup = $('[data-replicate-destination]').attr('data-replicate-destination'); // Unique name for group
+    $('[data-replicate-destination]').each(function() {
+      var replicateGroup = $(this).attr('data-replicate-destination'); // Unique name for group
       init(replicateGroup);
+    })
   }
 
 }());

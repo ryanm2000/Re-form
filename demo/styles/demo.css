@@ -4,16 +4,34 @@ body {
   margin:0;
 }
 
-.control {
-  margin: 200px 0 0;
+/*Typography*/
+h1 {
+  color: #fff;
+  font-family: Cambria, Helvetica Neue, Sans Serif;
+  text-align: left;
+  font-size: 50px;
+}
+h2 {
+  color: #e8e8e8;
+  font-family: Cambria, Helvetica, Sans Serif;
   text-align: center;
+  font-size: 30px;
+}
+
+section {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.control {
 }
 
 .control input {
   padding: 15px;
   background: rgba(255,255,255,.8);
+  box-shadow: 0 3px 4px rgba(0,0,0,.1);
   border: solid 2px rgba(255,255,255,.8);
-  width: 40px;
   height: 50px;
   display: inline-block;
   font-size: 30px;
@@ -25,7 +43,29 @@ body {
 .control input:focus {
   background-color: rgba(255,255,255,1);
   border-color: #00b38a;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,.23);
+  box-shadow: 0 3px 4px rgba(0,0,0,.2);
   outline: none;
-  transition: background 0s, box-shadow 0s, border-color .1s;
+  transition: background .1s, box-shadow .3s, border-color .1s;
 }
+
+.example {
+  border-bottom: dashed 2px #e8e8e8;
+  padding-bottom: 30px;
+}
+
+.input-hidden {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.example:hover .input-hidden {
+  opacity: 0.8;
+  transition: opacity .2s;
+}
+
+/* Size input fields */
+input[maxlength="1"] { width: 40px; }
+input[maxlength="2"] { width: 50px; }
+input[maxlength="3"] { width: 60px; }
+input[maxlength="4"] { width: 70px; }
+input[maxlength="5"] { width: 80px; }
