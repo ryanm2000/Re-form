@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="styles/demo.css">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="styles/demo.css">
 </head>
 <body>
-    <div class="control">
-        <input type="text" data-replicate-source="postcode" placeholder="*" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="*" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="*" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="*" maxlength="1" />
+  <section>
+    <h1>Examples</h1>
+    <div class="example example-postcode">
+      <h2>Postal Code</h2>
+      <div class="control">
+        <input type="text" data-replicate-source="postcode" placeholder="3" maxlength="1" />
+        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
+        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
+        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
+      </div>
+      <input type="text" class="input-hidden" data-replicate-destination="postcode" placeholder="(Hidden Field)" />
     </div>
 
-    <input type="text" data-replicate-destination="postcode" placeholder="(Hidden Field)" />
+
+    <div class="example example-pin">
+      <h2>Pin Code</h2>
+      <div class="control">
+        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
+        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
+        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
+        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
+        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
+      </div>
+      <input type="text" class="input-hidden" data-replicate-destination="pincode" placeholder="(Hidden Field)" />
+    </div>
+
+    <div class="example example-mobile">
+      <h2>Mobile Phone Number</h2>
+      <div class="control">
+        <input type="text" data-replicate-source="mobile" placeholder="0400" maxlength="4" />
+        <input type="text" data-replicate-source="mobile" placeholder="123" maxlength="3" />
+        <input type="text" data-replicate-source="mobile" placeholder="456" maxlength="3" />
+      </div>
+      <input type="text" class="input-hidden" data-replicate-destination="mobile" placeholder="(Hidden Field)" />
+    </div>
+
+    <div class="example example-mobile">
+      <h2>Landline Phone Number</h2>
+      <div class="control">
+        <input type="text" data-replicate-source="Landline" placeholder="+61" maxlength="3" />
+        <input type="text" data-replicate-source="Landline" placeholder="03" maxlength="2" />
+        <input type="text" data-replicate-source="Landline" placeholder="9555" maxlength="4" />
+        <input type="text" data-replicate-source="Landline" placeholder="1234" maxlength="4" />
+      </div>
+      <input type="text" class="input-hidden" data-replicate-destination="Landline" placeholder="(Hidden Field)" />
+    </div>
+  </section>
 
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <script src="../scripts/concat-input-fields.js"></script>
+  <script src="../scripts/concat-input-fields.js"></script>
 </body>
 </html>
