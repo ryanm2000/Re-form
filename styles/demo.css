@@ -7,6 +7,9 @@ body {
 }
 
 /*Typography*/
+h1, h2, h3 {
+  margin-top: 0;
+}
 h1 {
   color: #323a45;
   text-align: left;
@@ -21,11 +24,21 @@ h3 {
   text-align: left;
   font-size: 20px;
 }
+a {
+  color: #f27935;
+  text-decoration: none;
+  border-bottom: solid 3px #f27935;
+  transition: border-color .2s;
+}
+a:hover {
+  border-bottom-color: #1fbba6;
+  transition: border-color .1s;
+}
 
 section {
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  padding: 30px 10%;
 }
 
 /*Branding*/
@@ -56,10 +69,13 @@ section {
 }
 
 /*Billboard Section*/
+.billboard {
+  background: #fff;
+}
 .hero-list {
   list-style: none;
   padding: 0;
-  margin: 90px 0;
+  margin: 90px 0 0;
 }
 
 .hero-list li {
@@ -67,7 +83,7 @@ section {
   margin: 0;
   display: inline-block;
   width: 26%;
-  padding: 0 2.5%;
+  padding: 0 2.5% 3px;
   overflow: hidden;
 }
   .hero-list li .icon {
