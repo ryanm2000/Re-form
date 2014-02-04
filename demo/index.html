@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="styles/demo.css">
 </head>
 <body>
-  <section>
+  <!-- <section>
     <h1>Number Examples</h1>
     <div class="example example-increment">
       <h2>Size</h2>
@@ -15,10 +15,22 @@
         <span data-increment-number="increase">Up</span>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <h1>Concatenation Examples</h1>
+
+    <div class="example example-mobile">
+      <h2>Credit Card</h2>
+      <div class="control">
+        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
+        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
+        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
+        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
+      </div>
+      <input type="text" class="input-hidden" data-replicate-destination="cc" placeholder="(Hidden Field)" />
+    </div>
+
     <div class="example example-postcode">
       <h2>Postal Code</h2>
       <div class="control">
@@ -44,25 +56,15 @@
     </div>
 
     <div class="example example-mobile">
-      <h2>Mobile Phone Number</h2>
+      <h2>Phone Number</h2>
       <div class="control">
-        <input type="text" data-replicate-source="mobile" placeholder="0400" maxlength="4" />
-        <input type="text" data-replicate-source="mobile" placeholder="123" maxlength="3" />
-        <input type="text" data-replicate-source="mobile" placeholder="456" maxlength="3" />
+        <input type="text" data-replicate-source="phone" placeholder="0400" maxlength="4" />
+        <input type="text" data-replicate-source="phone" placeholder="123" maxlength="3" />
+        <input type="text" data-replicate-source="phone" placeholder="456" maxlength="3" />
       </div>
-      <input type="text" class="input-hidden" data-replicate-destination="mobile" placeholder="(Hidden Field)" />
+      <input type="text" class="input-hidden" data-replicate-destination="phone" placeholder="(Hidden Field)" />
     </div>
 
-    <div class="example example-mobile">
-      <h2>Landline Phone Number</h2>
-      <div class="control">
-        <input type="text" data-replicate-source="landline" placeholder="+61" maxlength="3" />
-        <input type="text" data-replicate-source="landline" placeholder="03" maxlength="2" />
-        <input type="text" data-replicate-source="landline" placeholder="9555" maxlength="4" />
-        <input type="text" data-replicate-source="landline" placeholder="1234" maxlength="4" />
-      </div>
-      <input type="text" class="input-hidden" data-replicate-destination="landline" placeholder="(Hidden Field)" />
-    </div>
   </section>
 
 
