@@ -10,6 +10,15 @@ module.exports = function(grunt) {
       },
       src: ['**']
     },
+    watch: {
+      scripts: {
+        files: ['**/*.js'],
+        tasks: ['copy:demo'],
+        options: {
+          spawn: false,
+        },
+      },
+    },
     copy: {
       demo: {
         files: [
@@ -29,9 +38,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // grunt.registerTask('deploy', ['githubPages:target']);
   grunt.registerTask('default', ['copy:demo']);
+  grunt.registerTask('watch', ['watch']);
   grunt.registerTask('deploy', ['gh-pages']);
 
 };
