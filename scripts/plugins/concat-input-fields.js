@@ -42,6 +42,7 @@
           sourceFields = this.getSourceFields(replicateGroup); // Cache sourceFields
 
       // Add an event handler to each <input>
+      // TODO: Add IE8 Compatibility
       [].forEach.call(sourceFields, function(element) { // Borrow the forEach method from the 'Array' built in object
         element.addEventListener("keyup", function(ev) {
           // Jump to next field
