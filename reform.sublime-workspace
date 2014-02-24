@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"ne",
+				"nextElementSibling"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
 				"fn",
 				"fun	Function"
 			],
@@ -18,10 +30,6 @@
 			[
 				"We",
 				"Web"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
 			],
 			[
 				"background",
@@ -44,36 +52,34 @@
 	"buffers":
 	[
 		{
-			"file": "todo.TODO",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 108,
+				"buffer_size": 259,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "scripts/plugins/concat-input-fields2.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1784,
-				"line_ending": "Windows",
-				"name": "(function() {"
+				"buffer_size": 775,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "(function($){\n  \n  $.fn.inputConcat = function() {\n    this.each(function() {\n      var element = $(this);\n\n      \n\n    });    \n  };\n\n}(jQuery));",
+			"file": "Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 145,
-				"line_ending": "Windows",
-				"name": "(function($){"
+				"buffer_size": 1084,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "demo/index.html",
+			"file": "scripts/concat-input-fields.js",
 			"settings":
 			{
-				"buffer_size": 3330,
+				"buffer_size": 2140,
 				"line_ending": "Windows"
 			}
 		}
@@ -242,6 +248,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/ryan.margheriti/Projects/Re-form/scripts/plugins/concat-input-fields.js",
+		"/C/Users/ryan.margheriti/Projects/Re-form/demo/index.html",
+		"/C/Users/ryan.margheriti/Projects/Re-form/scripts/plugins/number.js",
+		"/C/Users/ryan.margheriti/Projects/Re-form/scripts/plugins/concat-input-fields2.js",
+		"/C/src/UI.Library/src/styleguide-template/index.html",
+		"/C/Users/ryan.margheriti/Projects/Re-form/.gitattributes",
+		"/C/src/csn.ui.navigation/seed/less/sites/carsales/site-nav.less",
+		"/C/Users/ryan.margheriti/Projects/Re-form/todo.TODO",
+		"/C/Users/ryan.margheriti/Desktop/things.todo",
 		"/C/src/Csn.Carsales.Web/Areas/Showroom/Views/ShowroomEnquiry/EnquiryForm.cshtml",
 		"/C/src/Csn.Carsales.Web/Content/scripts/areas/campaigns/easy/lib/main.js",
 		"/C/src/Csn.Carsales.Web/Content/css/areas/campaigns/easy/base/mixins.less",
@@ -360,16 +375,7 @@
 		"/C/Users/ryan.margheriti/AppData/Local/Temp/Temp1_csn-icons (1).zip/style.css",
 		"/C/src/Csn.Carsales.Web/Content/css/areas/campaigns/easy/base/animations.less",
 		"/C/Users/ryan.margheriti/AppData/Local/Temp/Temp1_csn-icons.zip/style.css",
-		"/C/Users/ryan.margheriti/AppData/Local/Temp/Temp1_csn-icons.zip/selection.json",
-		"/C/src/Csn.Carsales.Web/Content/css/patterns/_tooltips.less",
-		"/C/src/Csn.Carsales.Web/Content/css/base/_reset.less",
-		"/C/src/Csn.Carsales.Web/Content/css/themes/_sections.less",
-		"/C/src/Csn.Styleguide/src/less/patterns/_tables.less",
-		"/C/src/Csn.Carsales.Web/Views/Gallery/MediaGalleryInPopup.cshtml",
-		"/C/src/Csn.Carsales.Web/Views/Shared/_ModalLayout.cshtml",
-		"/C/src/Csn.Styleguide/STRUCTURE.md",
-		"/C/src/Csn.Styleguide/src/less/modules/_accordions.less",
-		"/C/src/Csn.Styleguide/src/less/base/_variables.less"
+		"/C/Users/ryan.margheriti/AppData/Local/Temp/Temp1_csn-icons.zip/selection.json"
 	],
 	"find":
 	{
@@ -515,6 +521,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"focus",
+			"$",
+			"generateva",
+			"fieldAdvance",
+			"advance",
+			"fieldAdvance",
+			"advance",
+			"fieldAdvance",
+			"thisEl",
+			"sourceFields.",
+			"sourceFields",
+			".val",
+			"getDestinationField",
+			"replicateGroup",
+			"getDestinationField",
+			"getsourcefields",
+			"$",
+			"fields",
+			"mobile",
+			"landline",
+			"that",
+			"this.",
+			"this",
+			"THIS",
+			"this",
+			"THIS",
+			"ConcatFields",
+			"eval",
 			"function",
 			"destinationField",
 			"new",
@@ -614,35 +648,7 @@
 			"-",
 			"+",
 			"|",
-			"height",
-			"1b1b1b",
-			".media-gallery-header",
-			".popup-media-gallery",
-			"mediagalleryinpop",
-			"ryvus",
-			".panel",
-			"dimension",
-			"hasWidth",
-			"css",
-			"height",
-			"module-accordion",
-			"module-accordion ",
-			"accordion-with-icon",
-			"transition",
-			"16px",
-			".accordion-toggle",
-			"90",
-			"canvas-window",
-			"stock-image-warning",
-			"media-gallery-footer",
-			"modal",
-			"5px",
-			"7",
-			"col-7",
-			"col7",
-			"5px",
-			"li {",
-			".thumbnail-window"
+			"height"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -676,24 +682,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "todo.TODO",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 108,
+						"buffer_size": 259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								161,
+								161
 							]
 						],
 						"settings":
@@ -701,68 +707,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "scripts/plugins/concat-input-fields2.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1784,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								194,
-								194
-							]
-						],
-						"settings":
-						{
-							"auto_name": "(function() {",
-							"incomplete_sync": null,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"auto_name": "(function($){",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -772,20 +717,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "demo/index.html",
+					"buffer": 1,
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3330,
+						"buffer_size": 775,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2470,
-								2472
+								396,
+								386
 							]
 						],
 						"settings":
@@ -793,15 +738,81 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 812.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scripts/concat-input-fields.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1836,
+								1836
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 966.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -809,7 +820,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -849,7 +860,7 @@
 	"project": "reform.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -857,6 +868,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"concat",
+				"scripts\\plugins\\concat-input-fields.js"
+			],
 			[
 				"enquiryless",
 				"Content\\css\\modules\\_enquiry-form.less"
@@ -1364,10 +1379,6 @@
 			[
 				"pattersjade",
 				"Content\\prototypes\\code-guide\\jade\\patterns.jade"
-			],
-			[
-				"easybillboard",
-				"Content\\css\\areas\\campaigns\\easy\\sections\\billboard.less"
 			]
 		],
 		"width": 0.0
@@ -1378,16 +1389,36 @@
 		"selected_items":
 		[
 			[
+				"web",
+				"C:\\src\\csn.cars\\Csn.Carsales.Web\\Csn.Carsales.Web.sublime-project"
+			],
+			[
 				"",
-				"C:\\src\\Csn.Carsales.Web\\Csn.Carsales.Web.sublime-project"
+				"C:\\Users\\ryan.margheriti\\Projects\\text-overflow-scroll.js\\text-overflow-scroll.js.sublime-project"
+			],
+			[
+				"men",
+				"C:\\Users\\ryan.margheriti\\Projects\\mentoring\\mentoring.sublime-project"
+			],
+			[
+				"uili",
+				"C:\\src\\UI.Library\\UI.Library.sublime-project"
+			],
+			[
+				"mobi",
+				"C:\\src\\csn.cars\\Csn.Carsales.Mobi\\Csn.Carsales.Mobi.sublime-project"
+			],
+			[
+				"blog",
+				"C:\\Users\\ryan.margheriti\\Projects\\ryanmargheriti.github.io\\blog.sublime-project"
+			],
+			[
+				"text",
+				"C:\\Users\\ryan.margheriti\\Projects\\text-overflow-scroll.js\\text-overflow-scroll.js.sublime-workspace"
 			],
 			[
 				"we",
-				"C:\\src\\Csn.Carsales.Web\\Csn.Carsales.Web.sublime-project"
-			],
-			[
-				"web",
-				"C:\\src\\Csn.Carsales.Web\\Csn.Carsales.Web.sublime-project"
+				"C:\\src\\csn.cars\\Csn.Carsales.Web\\Csn.Carsales.Web.sublime-project"
 			],
 			[
 				"style",
@@ -1400,10 +1431,6 @@
 			[
 				"carloan",
 				"C:\\tempcl\\carloan.com.au\\carloan.com.au\\carloan.sublime-workspace"
-			],
-			[
-				"mobi",
-				"C:\\src\\Csn.Carsales.Mobi\\Csn.Carsales.Mobi.sublime-project"
 			],
 			[
 				"carloa",
@@ -1531,7 +1558,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 161.0,
+	"side_bar_width": 136.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
