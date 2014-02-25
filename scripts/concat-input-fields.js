@@ -25,21 +25,37 @@
 
     generateValue: function(sourceFields) {
       var vals = '';
-      for (var i = 0; i < sourceFields.length; i++) {
-        vals = vals + sourceFields[i].value;
+      for (var i = 0, j = this.sourceFields.length; i < j; i++) {
+        vals = vals + this.sourceFields[i].value;
       };
       return vals;
     },
 
+    nextSibling: function(element) {
+      var supported = !!document.getElementsByTagName('head')[0].nextElementSibling,
+        next = (supported) ? 'nextElementSibling' : 'nextSibling';
+
+      return function(element) {
+        if(element[next]) {
+          return element[next];
+        } else {
+          return null;
+        }
+      };
+    }(),
+
     fieldAdvance: function(element) {
       // maximum number of characters reached?
-      var value = element.value;
+      var value = element.value,
+          that = this;
       // If there is no more space in that field and another field is a sibling
-      if( (value.length == element.maxLength) &&
-          (element.nextElementSibling || nextElementSibling(element))
-      ) {
-        var nextSibling = element.nextElementSibling || nextElementSibling(element);
-        element.nextElementSibling.focus();
+      // TODO: Clean the following line up. It is a messy, messy hack
+      // to fix 2 issues in IE8:
+      //   1. nextSibling returns whitespace as the next sibling
+      //   2. nextSibling will return true if there is *anything* next
+      //      to it at all. So we need to check the tags. Its ugly.
+      if( (value.length == element.maxLength) && (that.nextSibling(element)) && (that.nextSibling(element).tagName == 'INPUT' || that.nextSibling(element).tagName == 'TEXTAREA')) {
+        that.nextSibling(element).focus();
       }
     },
 
@@ -48,20 +64,21 @@
     },
 
     init: function(replicateGroup) {
-      var that = this,
-          sourceFields = this.getSourceFields(replicateGroup); // Cache sourceFields
+      var that = this;
+
+      this.sourceFields = this.getSourceFields(replicateGroup); // Cache sourceFields
 
       // Add an event handler to each <input>
-      for (var i = 0, j = sourceFields.length; i < j; i++) {
+      for (var i = 0, j = that.sourceFields.length; i < j; i++) {
         (function(i) {
-          that.addEvent(sourceFields[i], 'keyup', function() {
+          that.addEvent(that.sourceFields[i], 'keyup', function() {
 
             // Jump to next field
-            that.fieldAdvance(sourceFields[i]);
+            that.fieldAdvance(that.sourceFields[i]);
 
             // Update hidden field
             that.copyToDestination(
-              that.generateValue(sourceFields),
+              that.generateValue(that.sourceFields),
               that.getDestinationField(replicateGroup)
             );
           });
@@ -73,7 +90,7 @@
   // If we have replicate-destination present
   var elements = document.querySelectorAll('[data-replicate-destination]');
   if(elements.length) {
-    for (var i = 0; i < elements.length; i++) {
+    for (var i = 0, j = elements.length; i < j; i++) {
       var replicateGroup = elements[i].getAttribute('data-replicate-destination'); // Unique name for group
       var field = new ConcatFields;
       field.init(replicateGroup);

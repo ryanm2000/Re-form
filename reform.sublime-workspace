@@ -79,7 +79,7 @@
 			"file": "scripts/concat-input-fields.js",
 			"settings":
 			{
-				"buffer_size": 2140,
+				"buffer_size": 2457,
 				"line_ending": "Windows"
 			}
 		}
@@ -788,15 +788,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2140,
+						"buffer_size": 2457,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1836,
-								1836
+								2457,
+								2457
 							]
 						],
 						"settings":
@@ -809,7 +809,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 966.0,
+						"translation.y": 372.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
