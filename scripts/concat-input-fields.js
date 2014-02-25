@@ -79,8 +79,8 @@
       // TODO: If the user presses backspace when there is nothing in the field, backspace from the previous field
       if( (value.length == 0) && (that.previousSibling(element)) && (that.previousSibling(element).tagName == 'INPUT' || that.previousSibling(element).tagName == 'TEXTAREA')) {
         var prevEl = that.previousSibling(element);
-        // prevEl.value = prevEl.value.substring(0, prevEl.value.length - 1);
         prevEl.focus();
+        prevEl.value = prevEl.value; // Hack for IE to place the cursor at the end of the field
       }
     },
 
@@ -104,7 +104,6 @@
             } else {
               that.fieldRetreat(that.sourceFields[i]);
             }
-
 
             // Update hidden field
             that.copyToDestination(
