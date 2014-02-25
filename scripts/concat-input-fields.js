@@ -44,6 +44,19 @@
       };
     }(),
 
+    previousSibling: function(element) {
+      var supported = !!document.getElementsByTagName('head')[0].nextElementSibling,
+          previous = (supported) ? 'previousElementSibling' : 'previousSibling';
+
+      return function(element) {
+        if(element[previous]) {
+          return element[previous];
+        } else {
+          return null;
+        }
+      };
+    }(),
+
     fieldAdvance: function(element) {
       // maximum number of characters reached?
       var value = element.value,
@@ -59,6 +72,18 @@
       }
     },
 
+    fieldRetreat: function(element) {
+      var value = element.value,
+          that = this;
+      // TODO: See comment in fieldAdvance method
+      // TODO: If the user presses backspace when there is nothing in the field, backspace from the previous field
+      if( (value.length == 0) && (that.previousSibling(element)) && (that.previousSibling(element).tagName == 'INPUT' || that.previousSibling(element).tagName == 'TEXTAREA')) {
+        var prevEl = that.previousSibling(element);
+        // prevEl.value = prevEl.value.substring(0, prevEl.value.length - 1);
+        prevEl.focus();
+      }
+    },
+
     copyToDestination: function(value, destinationField) {
       destinationField.value = value;
     },
@@ -71,10 +96,15 @@
       // Add an event handler to each <input>
       for (var i = 0, j = that.sourceFields.length; i < j; i++) {
         (function(i) {
-          that.addEvent(that.sourceFields[i], 'keyup', function() {
+          that.addEvent(that.sourceFields[i], 'keyup', function(ev) {
 
-            // Jump to next field
-            that.fieldAdvance(that.sourceFields[i]);
+            if(ev.keyCode != 8) { // Key hit wasnt BACKSPACE
+              // Jump to next field
+              that.fieldAdvance(that.sourceFields[i]);
+            } else {
+              that.fieldRetreat(that.sourceFields[i]);
+            }
+
 
             // Update hidden field
             that.copyToDestination(

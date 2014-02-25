@@ -79,7 +79,7 @@
 			"file": "scripts/concat-input-fields.js",
 			"settings":
 			{
-				"buffer_size": 2457,
+				"buffer_size": 3151,
 				"line_ending": "Windows"
 			}
 		}
@@ -521,6 +521,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"i = ",
 			"focus",
 			"$",
 			"generateva",
@@ -647,8 +648,7 @@
 			"red",
 			"-",
 			"+",
-			"|",
-			"height"
+			"|"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -788,15 +788,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2457,
+						"buffer_size": 3151,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2457,
-								2457
+								0,
+								3151
 							]
 						],
 						"settings":
@@ -809,7 +809,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 372.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
