@@ -98,6 +98,9 @@
         (function(i) {
           that.addEvent(that.sourceFields[i], 'keyup', function(ev) {
 
+            // TODO: If user enters a character on a field that is
+            // already full, advance to the next field before entering it.
+
             if(ev.keyCode != 8) { // Key hit wasnt BACKSPACE
               // Jump to next field
               that.fieldAdvance(that.sourceFields[i]);
