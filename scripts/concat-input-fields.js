@@ -7,6 +7,10 @@
 
   ConcatFields.prototype = {
 
+    isSupportedBrowser: function() {
+      return !(navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/))
+    },
+
     getSourceFields: function(replicateGroup) {
       return document.querySelectorAll('[data-replicate-source='+replicateGroup+']');
     },
@@ -87,6 +91,10 @@
     init: function(destinationField) {
       var that = this;
 
+      if(!that.isSupportedBrowser()) {
+        return;
+      }
+
       that.destinationField = destinationField; // Cache sourceField
       that.pattern = destinationField.getAttribute('data-replicate-pattern').split(','); // Cache desired pattern
       that.fieldType = destinationField.getAttribute('type') || 'text';
@@ -101,12 +109,16 @@
             var inputEl = document.createElement('input');
             var newEl  = wrapper.appendChild(inputEl);
 
+            // Update the sourceFields array
             that.sourceFields.push(newEl);
 
-            newEl.setAttribute('maxlength', that.pattern[i]);
-            newEl.setAttribute('type', that.fieldType);
-            that.addEvent(newEl, 'keyup', function(ev) {
+            newEl.setAttribute('maxlength', that.pattern[i]); // Set the appropriate maxlength
+            newEl.setAttribute('type', that.fieldType); // Set the appropriate type
 
+            // Set the original field to type hidden
+            that.destinationField.setAttribute('type','hidden')
+
+            that.addEvent(newEl, 'keyup', function(ev) {
               // TODO: If user enters a character on a field that is
               // already full, advance to the next field before entering it.
 
