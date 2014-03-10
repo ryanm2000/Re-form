@@ -27,7 +27,7 @@ section {
 .control {
 }
 
-.control input {
+input {
   padding: 15px;
   background: rgba(255,255,255,.8);
   box-shadow: 0 3px 4px rgba(0,0,0,.1);
@@ -40,7 +40,7 @@ section {
   cursor: pointer;
 }
 
-.control input:focus {
+input:focus {
   background-color: rgba(255,255,255,1);
   border-color: #00b38a;
   box-shadow: 0 3px 4px rgba(0,0,0,.2);
@@ -53,14 +53,8 @@ section {
   padding-bottom: 30px;
 }
 
-.input-hidden {
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.example:hover .input-hidden {
-  opacity: 0.8;
-  transition: opacity .2s;
+.fallback {
+  display: none;
 }
 
 /* Size input fields */

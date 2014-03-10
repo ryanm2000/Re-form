@@ -2,17 +2,13 @@
   "use strict";
 
   function ConcatFields() {
-    this.sourceFields = false;
+    this.sourceFields = [];
   }
 
   ConcatFields.prototype = {
 
     getSourceFields: function(replicateGroup) {
       return document.querySelectorAll('[data-replicate-source='+replicateGroup+']');
-    },
-
-    getDestinationField: function(replicateGroup) {
-      return document.querySelector('[data-replicate-destination='+replicateGroup+']');
     },
 
     addEvent: function(element, event, func) {
@@ -88,44 +84,57 @@
       destinationField.value = value;
     },
 
-    init: function(replicateGroup) {
+    init: function(destinationField) {
       var that = this;
 
-      this.sourceFields = this.getSourceFields(replicateGroup); // Cache sourceFields
+      that.destinationField = destinationField; // Cache sourceField
+      that.pattern = destinationField.getAttribute('data-replicate-pattern').split(','); // Cache desired pattern
+      that.fieldType = destinationField.getAttribute('type') || 'text';
 
-      // Add an event handler to each <input>
-      for (var i = 0, j = that.sourceFields.length; i < j; i++) {
-        (function(i) {
-          that.addEvent(that.sourceFields[i], 'keyup', function(ev) {
+      // Create new fields based on pattern from destination field
+      if(typeof this.pattern == "object") {
+        var that = this,
+            wrapper = destinationField.parentNode; // Determine where to put these new fields
 
-            // TODO: If user enters a character on a field that is
-            // already full, advance to the next field before entering it.
+        for (var i = 0; i < this.pattern.length; i++) {
+          (function(i) {
+            var inputEl = document.createElement('input');
+            var newEl  = wrapper.appendChild(inputEl);
 
-            if(ev.keyCode != 8) { // Key hit wasnt BACKSPACE
-              // Jump to next field
-              that.fieldAdvance(that.sourceFields[i]);
-            } else {
-              that.fieldRetreat(that.sourceFields[i]);
-            }
+            that.sourceFields.push(newEl);
 
-            // Update hidden field
-            that.copyToDestination(
-              that.generateValue(that.sourceFields),
-              that.getDestinationField(replicateGroup)
-            );
-          });
-        })(i);
+            newEl.setAttribute('maxlength', that.pattern[i]);
+            newEl.setAttribute('type', that.fieldType);
+            that.addEvent(newEl, 'keyup', function(ev) {
+
+              // TODO: If user enters a character on a field that is
+              // already full, advance to the next field before entering it.
+
+              if(ev.keyCode != 8) { // Key hit wasnt BACKSPACE
+                // Jump to next field
+                that.fieldAdvance(newEl);
+              } else {
+                that.fieldRetreat(newEl);
+              }
+
+              // Update hidden field
+              that.copyToDestination(
+                that.generateValue(that.sourceFields),
+                that.destinationField
+              );
+            });
+          })(i)
+        };
       }
     }
   }
 
   // If we have replicate-destination present
-  var elements = document.querySelectorAll('[data-replicate-destination]');
+  var elements = document.querySelectorAll('[data-replicate]');
   if(elements.length) {
     for (var i = 0, j = elements.length; i < j; i++) {
-      var replicateGroup = elements[i].getAttribute('data-replicate-destination'); // Unique name for group
       var field = new ConcatFields;
-      field.init(replicateGroup);
+      field.init(elements[i]);
     };
   }
 

@@ -21,48 +21,24 @@
     <h1>Concatenation Examples</h1>
 
     <div class="example example-mobile">
+      <h2>Phone Number</h2>
+      <input type="text" data-replicate="phone" data-replicate-pattern="4,3,3" placeholder="No JS Fallback" class="fallback" />
+    </div>
+
+    <div class="example example-mobile">
       <h2>Credit Card</h2>
-      <div class="control">
-        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
-        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
-        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
-        <input type="text" data-replicate-source="cc" placeholder="xxxx" maxlength="4" />
-      </div>
-      <input type="text" class="input-hidden" data-replicate-destination="cc" placeholder="(Hidden Field)" />
+      <input type="text" data-replicate="cc" data-replicate-pattern="4,4,4,4" placeholder="No JS fallback" class="fallback" />
     </div>
 
     <div class="example example-postcode">
       <h2>Postal Code</h2>
-      <div class="control">
-        <input type="text" data-replicate-source="postcode" placeholder="3" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
-        <input type="text" data-replicate-source="postcode" placeholder="0" maxlength="1" />
-      </div>
-      <input type="text" class="input-hidden" data-replicate-destination="postcode" placeholder="(Hidden Field)" />
+      <input type="text" data-replicate="postcode" data-replicate-pattern="1,1,1,1" placeholder="No JS Fallback" class="fallback" />
     </div>
 
 
     <div class="example example-pin">
       <h2>Pin Code</h2>
-      <div class="control">
-        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
-        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
-        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
-        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
-        <input type="password" data-replicate-source="pincode" placeholder="*" maxlength="1" />
-      </div>
-      <input type="text" class="input-hidden" data-replicate-destination="pincode" placeholder="(Hidden Field)" />
-    </div>
-
-    <div class="example example-mobile">
-      <h2>Phone Number</h2>
-      <div class="control">
-        <input type="text" data-replicate-source="phone" placeholder="0400" maxlength="4" />
-        <input type="text" data-replicate-source="phone" placeholder="123" maxlength="3" />
-        <input type="text" data-replicate-source="phone" placeholder="456" maxlength="3" />
-      </div>
-      <input type="text" class="input-hidden" data-replicate-destination="phone" placeholder="(Hidden Field)" />
+      <input type="password" data-replicate="pincode" data-replicate-pattern="1,1,1,1,1" placeholder="No JS Fallback" class="fallback" />
     </div>
 
   </section>
